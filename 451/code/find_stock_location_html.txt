@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Check the stock location of an item</title>
+</head>
+
+<h3>Connecting to market using MySQL/PHP</h3>
+
+<hr>
+<p>
+    Please enter the name of the item. (Orange, BBQ grill tools, etc.)
+</p>
+
+
+<form action="find_stock_location.php" method = "POST">
+    <input type = "text" name = "name"> <br>
+    <input type = "submit" value = "submit">
+    <input type = "reset" value = "erase">
+</form>
+
+<hr>
+
+
+
+<p>
+    <a href="find_stock_location_html.txt" >Contents</a>
+    of this page.
+
+</p>
+
+<p>
+<a href="find_stock_location.txt" >Contents</a>
+of the PHP page that gets called.
+(And the <a href="connectionDataMarket.txt" >connection data</a>,
+ kept separately for security reasons.)
+
+</body>
+
+
+</html>

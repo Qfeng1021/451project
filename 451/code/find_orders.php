@@ -1,0 +1,74 @@
+<?php
+include('connectionDataMarket.txt');
+
+$conn = mysqli_connect($server, $user, $pass, $dbname, $port)
+or die("Error connecting to MySQL server.");
+
+?>
+
+<html>
+<head>
+    <title>Find Orders</title>
+    </head>
+    <body bgcolor="white">
+
+    <hr>
+
+<?php
+
+$name = $_POST['name'];
+
+$name = mysqli_real_escape_string($conn, $name);
+
+$query = "SELECT CONCAT(c.fname, " ", c.lname) AS 'customer name', o.order_id, o.ship_status, o.total_price
+FROM orders o JOIN customer c ON o.customer_id=c.customer_id
+WHERE o.order_id = ";
+$query = $query."'".$name."'";
+    
+?>
+
+    <p>
+        The query:
+    <p>
+    <?php
+    print $query;
+    ?>
+
+    <hr>
+    <p>
+        Result of query:
+        <p>
+
+    <?php
+    $result = mysqli_query($conn, $query)
+    or die(mysqli_error($conn));
+
+    print("<pre>");
+    print("customer_name, order_id, ship_status, total_price");
+    while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
+    {
+        print "\n";
+        print "$row[customer_name]   $row[order_id]   $row[ship_status]   $row[total_price]";
+    }
+    print "</pre>";
+
+    mysqli_free_result($result);
+    mysqli_close($conn);
+    ?>
+        <p>
+        <hr>
+    <p>
+        <a href = "find_orders.txt" >Contents</a>
+        of the PHP program that create this page.
+
+
+    </p>
+    </body>
+</html>
+
+
+
+
+
+
+

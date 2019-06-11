@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Welcome to the management page!</title>
+</head>
+
+<h3>Connecting to market using MySQL/PHP</h3>
+
+<hr>
+<p>
+Please click the function you want to use:
+<p>
+<button onclick="{location.href='check_stock.html'}">Check the stock for items</button>
+<button onclick="{location.href='find_orders.html'}">Find the orders</button>
+<button onclick="{location.href='find_stock_location.html'}">Find the location of the item in the stock</button>
+<button onclick="{location.href='check_memship.html'}">Check the membership of a customer</button>
+<button onclick="{location.href='check_location_items.html'}">List the items in location</button>
+
+<hr>
+
+
+
+<p>
+    <a href="welcome.txt" >Contents</a>
+    of this page.
+</p>
+
+
+</body>
+
+
+</html>

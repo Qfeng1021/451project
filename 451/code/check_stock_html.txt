@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Assignment</title>
+</head>
+
+<h3>Connecting to market using MySQL/PHP</h3>
+
+<hr>
+<p>
+    Please enter the last name of a customer. (Pauli, Sadler, etc.)
+</p>
+
+
+<form action="check_stock.php" method = "POST">
+    <input type = "text" name = "name"> <br>
+    <input type = "submit" value = "submit">
+    <input type = "reset" value = "erase">
+</form>
+
+<hr>
+
+
+
+<p>
+    <a href="findOrders_html.txt" >Contents</a>
+    of this page.
+
+</p>
+
+<p>
+<a href="findOrders.txt" >Contents</a>
+of the PHP page that gets called.
+(And the <a href="connectionData.txt" >connection data</a>,
+ kept separately for security reasons.)
+
+</body>
+
+
+</html>
